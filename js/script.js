@@ -27,9 +27,7 @@ function displayPhotos() {
         })
 
         const img = document.createElement('IMG');
-        // img.setAttribute('src', photo.urls.regular);
-        // img.setAttribute('alt', photo.alt_description);
-        // img.setAttribute('title', photo.alt_description);
+
         setAtributes(img, {
             src: photo.urls.regular,
             alt: photo.alt_description,
@@ -51,5 +49,13 @@ async function getPhotosFromUnsplash() {
 
     }
 }
+
+window.addEventListener('scroll', () => {
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 ) {
+        getPhotosFromUnsplash();
+    }
+});
+
+
 
 getPhotosFromUnsplash();
