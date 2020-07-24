@@ -1,9 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 html {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
-    min-height: 100vh;
-    background-color: #DFDBE5;
+    font-family: 'Bebas Neue', sans-serif, cursive;
+    // min-height: 100vh;
+    background-color: #f0e7b7;
+    background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23151515' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    
+    @media screen and (min-width: 1001px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 20px;
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .8);
+
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// image container
+.image-container {
+
+    @media screen and (min-width: 1001px) {
+        margin: 10px 30%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        margin: 10px;
+    }
+
+    img {
+        width: 100%;
+        margin-top: 5px;
+    }
 }
