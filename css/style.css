@@ -8,7 +8,8 @@ body {
   margin: 0;
   font-family: 'Bebas Neue', sans-serif, cursive;
   background-color: #f0e7b7;
-  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23151515' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background: -webkit-gradient(linear, left top, right top, from(#970797), color-stop(35%, #3333ec), to(#00d4ff));
+  background: linear-gradient(90deg, #970797 0%, #3333ec 35%, #00d4ff 100%);
 }
 
 h1 {
@@ -47,9 +48,20 @@ h1 {
           transform: translate(-50%, -50%);
 }
 
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media screen and (min-width: 1001px) {
   .image-container {
-    margin: 10px 30%;
+    margin: 10px 15%;
   }
 }
 
@@ -59,8 +71,54 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1001px) {
+  .image-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.image-container a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 0 12px;
+  -ms-flex-preferred-size: 16.6666667%;
+      flex-basis: 16.6666667%;
+  max-width: 16.6666667%;
+  margin: 0 10px;
+}
+
 .image-container img {
   width: 100%;
-  margin-top: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 3px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.image-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  position: relative;
+  z-index: 2;
 }
 /*# sourceMappingURL=style.css.map */

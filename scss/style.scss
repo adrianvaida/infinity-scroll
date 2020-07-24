@@ -9,7 +9,7 @@ body {
     font-family: 'Bebas Neue', sans-serif, cursive;
     // min-height: 100vh;
     background-color: #f0e7b7;
-    background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23151515' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background: linear-gradient(90deg, rgb(151, 7, 151) 0%, rgb(51, 51, 236) 35%, rgba(0,212,255,1) 100%);
 }
 
 h1 {
@@ -17,7 +17,7 @@ h1 {
     margin-top: 25px;
     margin-bottom: 15px;
     letter-spacing: 5px;
-    
+
     @media screen and (min-width: 1001px) {
         font-size: 40px;
     }
@@ -47,15 +47,47 @@ h1 {
 .image-container {
 
     @media screen and (min-width: 1001px) {
-        margin: 10px 30%;
+        margin: 10px 15%;
     }
 
     @media screen and (max-width: 1000px) {
         margin: 10px;
     }
 
+    display: flex;
+    flex: 0 1 auto;
+
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1001px) {
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+    a {
+        flex: 0 0 auto;
+        padding: 0 12px;
+        flex-basis: 16.6666667%;
+        max-width: 16.6666667%;
+        margin: 0 10px;
+    }
     img {
-        width: 100%;
-        margin-top: 5px;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+        margin: 5px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        padding: 3px;
+        transform: scale(.9);
+        position: relative;
+        z-index: 1;
+        &:hover {
+            transform: scale(1.1);
+            position: relative;
+            z-index: 2;
+        }
     }
 }
